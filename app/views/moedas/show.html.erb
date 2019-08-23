@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @moeda.description %>
-</p>
+<form>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @moeda.acronym %>
-</p>
+  <div class="form-group">
+    <%= label_tag nil, @moeda.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @moeda.description, class:"form-control", disabled: true %>
+  </div>
 
-<p>
-  <strong>Url image:</strong>
-  <%= @moeda.url_image %>
-</p>
+  <div class="form-group">
+    <%= label_tag nil, @moeda.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @moeda.acronym, class:"form-control", disabled: true %>
+  </div>
 
-<%= link_to 'Edit', edit_moeda_path(@moeda) %> |
-<%= link_to 'Back', moedas_path %>
+  <div class="form-group">
+    <%= label_tag nil, @moeda.class.human_attribute_name(:url_image) %>
+    <%= text_field_tag nil,@moeda.url_image , class:"form-control", disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, 'Mineração'%>
+    <%= text_field_tag nil, 'Decrição', class:"form-control", disabled: true %>
+  </div>
+
+</form>
+
+<%= link_to t('links.edit'), edit_moeda_path(@moeda), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), moeda_path, class:"btn btn-primary" %>
