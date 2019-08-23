@@ -4,7 +4,6 @@
 #*****************VALIDAÇÕES ************************
 # Olhar as validações do model
 # Valida se os campos estão preechidos
-=begin
 RSpec.describe Moeda, type: :model do
       describe 'VALIDAÇÃO' do
         let!(:moeda) { FactoryBot.create :moeda }
@@ -18,5 +17,5 @@ RSpec.describe Moeda, type: :model do
         end
       end
 end
-=end
+
 
