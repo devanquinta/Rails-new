@@ -6,11 +6,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %> <!--parametros do css--->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %><!--parametros do js--->
+    <!--para nao carregar em todas as paginas css e js--->
   </head>
 
   <body>
-  <h1> TESTE LAYOUT EM TODAS AS PAGINAS </h1>
+  <h1> TESTE LAYOUT EM TODAS AS PAGINAS -  <%= params[:controller] %></h1>
+  <script>  $.notify("Access granted", "success");</script>
+<!--  Notificação-->
     <%= yield %>
   </body>
 </html>

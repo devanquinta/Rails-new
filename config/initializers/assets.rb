@@ -9,6 +9,27 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in the app/assets
+# application.js.erb, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+#   para  nao carregar em todas as paginas
+
+Rails.application.config.assets.precompile += %w( moedas.js )
+
+Rails.application.config.assets.precompile +=
+    %w(
+        moedas.css
+        mining_types.css
+        scaffolds.css
+        welcome.css
+        jquey.js
+        notify.js
+      )
+Rails.application.config.assets.precompile +=
+    %w(
+        cable.js
+        mining_types.js
+        welcome.js
+      S)
+

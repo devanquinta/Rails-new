@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_08_20_203226) do
 
-  create_table "alunos", force: :cascade do |t|
-    t.integer "matricula"
-    t.string "nome"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "mining_types", force: :cascade do |t|
     t.string "name"
     t.string "acronym"

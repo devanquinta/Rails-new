@@ -1,10 +1,9 @@
 #**************************************************************************
 ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-
 require 'rspec/rails'
-require 'rspec/autorun'
+require 'rails_helper'
 require 'capybara/rails'
+require File.expand_path("../../config/environment", __FILE__)
 Rails.logger = Logger.new(STDOUT)
 #***************************************************************************
 
