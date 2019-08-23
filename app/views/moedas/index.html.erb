@@ -1,36 +1,87 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Moedas</h1>
-<%= data_br(Date.today)%><br>
-<%= nome_aplicacao %><br>
-<%= cookies[:curso]%>
-<table>
+<h1><%= Moeda.model_name.human(count: @moedas.count) %></h1>
+<table class="table table-hover table-dark">
   <thead>
-    <tr>
-      <th><%=@moedas.human_attribute_name(:description)%></th>
-      <th><%=@moedas.human_attribute_name(:acronym)%></th>
-      <th><%=@moedas.human_attribute_name(:url_image)%></th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th><%= @moedas.human_attribute_name(:description) %></th>
+    <th><%= @moedas.human_attribute_name(:acronym) %></th>
+    <th><%= @moedas.human_attribute_name(:url_image) %></th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @moedas.each do |moeda| %>
-      <tr>
-        <td><%= moeda.description %></td>
-        <td><%= moeda.acronym %></td>
-        <td><%= moeda.url_image %></td>
-        <td><img src="<%= moeda.url_image %>" width="50px" height="50px"></td>
-        <td><%= link_to "Mostrar", moeda %></td> <!---t(links.show) traduções--->
-        <td><%= link_to "Editar", edit_moeda_path(moeda) %></td>
-        <td><%= link_to "Deletar", moeda, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-        <br>
-      </tr>
-    <% end %>
+  <% @moedas.each do |coin| %>
+    <tr>
+      <td><%= coin.description %></td>
+      <td><%= coin.acronym %></td>
+      <td> <%= image_tag coin.url_image, size: "25x25" %> </td>
+      <td><%= link_to t('links.show'), coin %></td>
+      <td><%= link_to t('links.edit'), edit_moeda_path(coin) %></td>
+      <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'Nova Moeda', new_moeda_path %>
+<%= link_to t('new.moeda'), new_moeda_path, class:"btn btn-primary" %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<p id="notice"><%#= notice %></p>-->
+<!--<%#= data_br(Date.today)%><br>-->
+<!--<%#= nome_aplicacao %><br>-->
+<%#= cookies[:curso]%>
+<!--<table class="table table-hover">-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th><%#=@moedas.human_attribute_name(:description)%></th>-->
+<!--      <th><%#=@moedas.human_attribute_name(:acronym)%></th>-->
+<!--      <th><%#=@moedas.human_attribute_name(:url_image)%></th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+    <%# @moedas.each do |moeda| %>
+<!--      <tr>-->
+<!--        <td><%#= moeda.description %></td>-->
+<!--        <td><%#= moeda.acronym %></td>-->
+<!--        <td><%#= moeda.url_image %></td>-->
+<!--        <td><img src="<%#= moeda.url_image %>" width="50px" height="50px"></td>-->
+<!--        <td><%#= link_to "Mostrar", moeda %></td> -->
+<!---t(links.show) traduções--->
+<!--        <td><%#= link_to "Editar", edit_moeda_path(moeda) %></td>-->
+<!--        <td><%#= link_to "Deletar", moeda, method: :delete, data: { confirm: 'Tem certeza?' } %></td>-->
+<!--        <br>-->
+<!--      </tr>-->
+    <%# end %>
+<!--  </tbody>-->
+<!--</table>-->
+
+<!--<br>-->
+
+<%#= link_to 'Nova Moeda', new_moeda_path %>
 

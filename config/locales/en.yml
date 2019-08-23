@@ -30,34 +30,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  abc: "Hello world"
-
+  current_locale: "English (International)"
+  welcome: "Welcome!"
+  messages:
+    welcome: "This is the Crypto Wallet, an app that you can register and keep up with your cryptocoins."
+    menu: "To start, choose an option below:"
+    confirm: "Are you sure?"
+  hello: "Hello world"
   links:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
-
-  activerecord:
-    models:
-      moeda: Moeda
-      mining_types: Tipo de mineração
-
-    attributes:
-      moeda:
-        id: codigo
-        description: Descrição
-        acronym: Sigla
-        url_image: Imagem
-        mining_type: Tipo de mineração
-        mining_type_id: ID
-        updated_at: Atualizão
-        created_at: Criado em
-      mining_type:
-        id: codigo
-        description: Descrição
-        acronym: Sigla
-        url_image: Imagem
-        updated_at: Atualizão
-        created_at: Criado em
-
-
+    new: "New"
+    back: "Back"
+  new:
+    coin: "New Coin"
+    mining_type: "New Mining Type"
+  editing:
+    coin: "Editing Coin"
+    mining_type: "Editing Mining Type"
+  showing:
+    coin: "Showing Coin"
+    mining_type: "Showing Mining Type"

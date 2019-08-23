@@ -26,19 +26,19 @@ namespace :dev do
                 # Campos tem que ser iguais ao do banco -- todos
                 description: "Bitcoin",
                 acronym: "BTC",
-                url_image: "https://assets.chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg",
+                url_image: "https://imagepng.org/wp-content/uploads/2017/06/moeda-bitcoin-coin.png",
                 mining_type: MiningType.find_by(acronym: 'PoW')
             },
             {
                 description: "Ethereum",
                 acronym: "ETH",
-                url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCRfwkqpPvFb3QmmwGONG2i6PsgnqZ3L7dRzCNlaSTB1-ruu5",
+                url_image: "https://www.infomoney.com.br/Assets/Images/crypto/eth_badge.png",
                 mining_type: MiningType.all.sample
             },
             {
                 description: "Dash",
                 acronym: "DASH",
-                url_image: "https://ih1.redbubble.net/image.406055498.8711/ap,550x550,12x12,1,transparent,t.png",
+                url_image: "https://media.dash.org/wp-content/uploads/Dash-D-white_on_blue_circle.png",
                 mining_type: MiningType.all.sample
             },
             {
